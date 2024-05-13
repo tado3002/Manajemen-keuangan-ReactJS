@@ -1,3 +1,4 @@
+import { rupiahFormatter } from "../../utils/idrFormater";
 const ListCard = ({data,deleteData}) => {
     return (
         <>
@@ -21,7 +22,7 @@ const ListCard = ({data,deleteData}) => {
                                           <tr key={index}>
                                             <th scope="row">{index+1}</th>
                                             <td>{item.title}</td>
-                                            <td>Rp. {item.value}</td>
+                                            <td>{rupiahFormatter(item.value)}</td>
                                             <td>{item.type === 1? "Pemasukan":"Pengeluaran"}</td>
                                             <td>
                                                 <button

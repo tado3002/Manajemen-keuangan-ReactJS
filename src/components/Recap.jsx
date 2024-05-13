@@ -1,3 +1,4 @@
+import { rupiahFormatter } from "../utils/idrFormater";
 const Recap = ({data}) => {
     let [totalInput,totalOutput] = [0,0]
     data.forEach(item => {
@@ -20,7 +21,7 @@ const Recap = ({data}) => {
 
                                 <div className='ms-3'>
                                     <h4 className='mb-0'>Total Uang</h4>
-                                    <p className='mb-0'>{allTotalBalance}</p>
+                                    <p className='mb-0'>{rupiahFormatter(allTotalBalance)}</p>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +38,7 @@ const Recap = ({data}) => {
 
                                 <div className='ms-3'>
                                     <h4 className='mb-0'>Pemasukan</h4>
-                                    <p className='mb-0'>{allTotalInput}</p>
+                                    <p className='mb-0'>{rupiahFormatter(allTotalInput)}</p>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +55,7 @@ const Recap = ({data}) => {
 
                                 <div className='ms-3'>
                                     <h4 className='mb-0'>Pengeluaran</h4>
-                                    <p className='mb-0'>{allTotalOuput}</p>
+                                    <p className='mb-0'>{rupiahFormatter(allTotalOuput)}</p>
                                 </div>
                             </div>
                         </div>

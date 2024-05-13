@@ -142,8 +142,6 @@ function App() {
        const { series, labels } = processData(data);
 
        setChartData({ series, labels });
-       console.log("chart", chartData)
-       console.log("data",data)
 
    }, [data]);
 

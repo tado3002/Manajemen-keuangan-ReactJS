@@ -63,7 +63,7 @@ const AddCard = ({addData}) => {
                                     type='text'
                                     className={`form-control ${error?'is-invalid':''}`}
                                     id='inputTitle'
-                                    onChange={e=>setTitle(e.target.value)} 
+                                    onChange={e=>setTitle(e.target.value.trimStart())} 
                                     value={title} 
                                 />
                                 {
