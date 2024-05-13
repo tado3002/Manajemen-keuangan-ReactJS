@@ -13,6 +13,7 @@ const ListCard = ({data,deleteData}) => {
                                     <th scope='col'>Judul</th>
                                     <th scope='col'>Jumlah</th>
                                     <th scope='col'>Jenis</th>
+                                    <th scope='col'>Tanggal</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -24,6 +25,7 @@ const ListCard = ({data,deleteData}) => {
                                             <td>{item.title}</td>
                                             <td>{rupiahFormatter(item.value)}</td>
                                             <td>{item.type === 1? "Pemasukan":"Pengeluaran"}</td>
+                                            <td>{item.date.toDateString()}</td>
                                             <td>
                                                 <button
 
