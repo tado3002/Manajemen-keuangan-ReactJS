@@ -23,12 +23,12 @@ const AddCard = ({addData}) => {
           const inputValue = {
             title : title,
             value : parseInt(value),
-            type  : type
+            type  : type,
+            date  : new Date()
           }
           addData(inputValue)
           cleaningData()
         }
-    
     };
 
     const cleaningData =()=>{
