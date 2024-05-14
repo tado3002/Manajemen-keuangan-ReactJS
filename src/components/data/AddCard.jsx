@@ -2,6 +2,12 @@ import { useState } from "react";
 
 
 const AddCard = ({addData}) => {
+    const dateNow = new Date()
+    const dateFormat = {
+      day   : dateNow.getDate(),
+      month : dateNow.getMonth()+1,
+      year  : dateNow.getFullYear()
+    }
     const types = [
         {
             value: 1,
@@ -24,7 +30,7 @@ const AddCard = ({addData}) => {
             title : title,
             value : parseInt(value),
             type  : type,
-            date  : new Date()
+            date  : dateFormat
           }
           addData(inputValue)
           cleaningData()

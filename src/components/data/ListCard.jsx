@@ -25,7 +25,7 @@ const ListCard = ({data,deleteData}) => {
                                             <td>{item.title}</td>
                                             <td>{rupiahFormatter(item.value)}</td>
                                             <td>{item.type === 1? "Pemasukan":"Pengeluaran"}</td>
-                                            <td>{item.date.toDateString()}</td>
+                                            <td>{`${item.date.day}/${item.date.month}/${item.date.year}`}</td>
                                             <td>
                                                 <button
 
